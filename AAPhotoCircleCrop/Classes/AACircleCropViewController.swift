@@ -31,6 +31,7 @@ open class AACircleCropViewController: UIViewController, UIScrollViewDelegate {
     override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    open var circleDiameter: CGFloat = UIScreen.main.bounds.width
     
     // MARK: - Private properties
     
@@ -39,11 +40,6 @@ open class AACircleCropViewController: UIViewController, UIScrollViewDelegate {
     fileprivate var imageView: UIImageView!
     fileprivate var scrollView: AACircleCropScrollView!
     fileprivate var cutterView: AACircleCropCutterView!
-    private var circleDiameter: CGFloat {
-        // Offeset for leading and trailing
-        let circleOffset: CGFloat = 40
-        return UIScreen.main.bounds.width - circleOffset * 2
-    }
     
     // MARK: - View Management
     
